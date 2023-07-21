@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#parent {
+    /* flex container */
+    border: solid red 10px;
+    display: flex;
+    height: 500px;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+    flex-flow: row wrap;
+    justify-content: start; /* to arrange elements on main axis */
+    align-items: center; /* to arrange elements on cross axis */
+    align-content: start;/* to arrange elements on cross axis */
+    
+}
+
+#parent div {
+    /* flex items */
+    border: solid blue 2px;
+    padding: 20px;
+    background-color: bisque;
+    min-width: 100px;
+    /* max-width: 200px; */
+    max-height: 100px;
+
+}
+
+#child1 {
+    flex-basis: 100%;
+}
+
+/* #child2 {
+    flex-grow: 1;
+} */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav button {
+    margin-left: 10px;
+}
+
+.signin {
+    background-color: rgb(229,9,20);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.signin:hover {
+    background-color: rgb(193,17,25);
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            Company
+        </div>
+        <div>
+            <button class="signin">Sign in</button>
+            <button>More</button>
+        </div>
+    </nav>
+    
+    <div id="parent"> <!-- flex container -->
+        <!-- div#parent then press tab -->
+        <div id="child1">  <!-- flex items -->
+            Child 1
+        </div>
+        <div  id="child2">
+            Child 2, with some more content bigger than others
+        </div>
+        <div>
+            Child 3
+        </div>
+        <div>
+            Child 4
+        </div>
+        <div>
+            Child 5, with some more content bigger than others
+        </div>
+    </div>
+
+</body>
+</html>
